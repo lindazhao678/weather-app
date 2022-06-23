@@ -55,7 +55,7 @@ function Weather() {
       <Row>
         <MyToDo todos={todos} forecasts={forecasts} />
         {forecasts.map((forecast, index) => (
-          <Col key={index}>
+          <Col key={index} className="col-12 col-md-4">
             <Day forecast={forecast}></Day>
           </Col>
         ))}
