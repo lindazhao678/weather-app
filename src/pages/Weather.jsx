@@ -6,6 +6,8 @@ import Day from "../components/Day";
 import MyToDo from "../components/MyToDo";
 import axios from 'axios';
 import Spinner from "react-bootstrap/Spinner";
+import { BsFillEmojiSunglassesFill, BsFillUmbrellaFill } from "react-icons/bs";
+import { GiMonclerJacket } from "react-icons/gi";
 
 function Weather() {
   const [forecasts, setForecasts] = useState([]);
@@ -15,13 +17,16 @@ function Weather() {
   function handleTodos(current) {
     let myTodos = [];
     if (current.day.uv >= 5) {
-      myTodos.push("Apply suncream");
+      const applySunsream =  <div><BsFillEmojiSunglassesFill/> Apply suncream</div>
+      myTodos.push(applySunsream);
     }
     if (current.day.avgtemp_c < 15) {
-      myTodos.push("Wear jacket");
+      const wearJacket = <div><GiMonclerJacket /> Wear Jacket</div>
+      myTodos.push(wearJacket);
     }
     if (current.day.daily_chance_of_rain > 5) {
-      myTodos.push("Bring umbrella");
+      const bringUmbrella =  <div><BsFillUmbrellaFill /> Bring umbrella</div>
+      myTodos.push(bringUmbrella);
     }
     if (myTodos.length === 0) {
       myTodos.push("Nothing in the list");
