@@ -6,7 +6,7 @@ function MyToDo(props) {
 
   return (
     <Card className="text-center my-5">
-      <Card.Title>Reminder for Tomorrow: {forecasts.length>0 && forecasts[0].date}</Card.Title>
+      <Card.Title>Reminder for Today: {forecasts.length>0 && forecasts[0].date}</Card.Title>
       <ListGroup className="list-group-flush">
         {todos.map((todo) => (
           <ListGroupItem key={todo.toString()}>{todo}</ListGroupItem>
