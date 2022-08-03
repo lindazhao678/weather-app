@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <footer className="footer text-center py-3">
-    Melbourne Weather App &copy; {getCurrentYear()}<a className="ms-2 footer-link" href="https://lijunzhao.com" target="_blank" rel="noreferrer">Lijun Zhao</a>
+    Melbourne Weather App &copy; {getCurrentYear()}<a className="ms-2" href="https://lijunzhao.com" target="_blank" rel="noreferrer">Lijun Zhao</a>
   </footer>
   )
 }
